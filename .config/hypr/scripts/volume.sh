@@ -1,0 +1,39 @@
+#!/bin/bash
+
+notify_volume() {
+    VOL=$(pamixer --get-volume)
+    MUTED=$(pamixer --get-mute)
+
+    if [ "$MUTED" = "true" ]; then
+        ICON=" "
+        TEXT="Muted"
+        VALUE=0
+    else
+        TEXT="$VOL"
+        VALUE=$VOL
+        if [ "$VOL" -le 30 ]; then ICON=" "; 
+        else ICON=" "; fi
+    fi
+
+    notify-send -a "volume" \
+                -u low \
+                -h string:x-canonical-private-synchronous:volume \
+                -h int:value:"$VALUE" \
+                -t 2000 \
+                "$ICON $TEXT"
+}
+
+case "$1" in
+  up)
+    pamixer -i 5 --unmute
+    notify_volume
+    ;;
+  down)
+    pamixer -d 5 --unmute
+    notify_volume
+    ;;
+  mute)
+    pamixer -t
+    notify_volume
+    ;;
+esac

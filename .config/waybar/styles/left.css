@@ -1,0 +1,102 @@
+@import "./color.css";
+
+#custom-launcher,
+#clock.time,
+#custom-pacman,
+#tray,
+#window,
+#mpd{
+    background-color: rgba(71, 64, 62, 0.8);
+    opacity: 1;
+}
+
+
+/* ----------------------------------
+  * launcher
+  * -------------------------------*/
+#custom-launcher {
+    background-image: url("/home/pyromagne/.local/icons/ge_logo.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* ----------------------------------
+  * clock - time
+  * -------------------------------*/
+#clock.time {
+    color: @accent-1;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* ----------------------------------
+  * pacman & pacseek
+  * -------------------------------*/
+#custom-pacman {
+    background-color: @accent-1;
+    color: @primary-2;
+    border-style: solid;
+    border-color: @primary-2;
+    border-width: 2px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+/* ----------------------------------
+  * tray
+  * -------------------------------*/
+#tray {
+    background-color: transparent;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+/* ----------------------------------
+  * window
+  * -------------------------------*/
+#window {
+    border-style: hidden;
+    padding: 0px 0px 0px 16px;
+}
+
+/* ----------------------------------
+  * MPDs
+  * -------------------------------*/
+#mpd {
+    border-radius: 10px;
+    color: @accent-1;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#mpd.2 {
+    border-radius: 10px 0px 0px 10px;
+    margin: 8px 0px 8px 6px;
+    padding: 4px 12px 4px 10px;
+}
+
+#mpd.3 {
+    border-radius: 0px 0px 0px 0px;
+    margin: 8px 0px 8px 0px;
+    padding: 4px;
+}
+
+#mpd.4 {
+    border-radius: 0px 10px 10px 0px;
+    margin: 8px 0px 8px 0px;
+    padding: 4px 10px 4px 14px;
+}
+
+#mpd.2,
+#mpd.3,
+#mpd.4 {
+    background-color: @primary-1;
+    font-size: 14px;
+}

@@ -1,0 +1,316 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 38,
+  "margin": "14 14 0 14",
+  "output": "eDP-1",
+
+  /* ---------------------------------
+   * LEFT MODULES
+   * -------------------------------*/
+  "modules-left": [
+    "custom/launcher",
+    "clock#time",
+    "custom/pacman",
+    //"custom/weather",
+    "tray",
+    //"hyprland/window",
+    "mpd",
+    "mpd#2",
+    "mpd#3",
+    "mpd#4"
+  ],
+
+  /* ---------------------------------
+   * CENTER MODULES
+   * -------------------------------*/
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  
+  /* ---------------------------------
+   * RIGHT MODULES
+   * -------------------------------*/
+
+  "modules-right": [
+    // "group/motherboard",
+    "clock#date",
+    "network",
+    "backlight",
+    "pulseaudio#sound",
+    // "pulseaudio#microphone", BROKEN SOMEHOW MIGHT FIX LATER
+    "battery",
+    "custom/power"
+  ],
+
+  /* ---------------------------------
+   * MODULES CONFIGURATIONS
+   * -------------------------------*/
+
+  /* ---------------------------------
+   * LEFT MODULES CONFIGURATIONS
+   * -------------------------------*/
+  "custom/launcher": {
+    "format": "    ",
+    "on-click": "rofi -show drun --term=kitty",
+    "tooltip": false
+  },
+
+  "clock#time": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip": false
+  },
+
+  "custom/pacman": {
+    "format": "{}",
+    "interval": 7200, // every two hours
+    "exec": "~/.config/waybar/scripts/checkupdates.sh",
+    "exec-if": "exit 0",
+    "on-click": "kitty -e sudo pacman -Syu",
+    "on-click-right": "kitty -e pacseek -ui",
+    "signal": 8
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 5
+  },
+
+  "mpd": {
+    "tooltip": true,
+    "tooltip-format": "{artist} - {album} - {title} - Total Time : {totalTime:%M:%S}",
+    "format": " {elapsedTime:%M:%S}",
+    "format-disconnected": "⚠  Disconnected",
+    "format-stopped": " Not Playing",
+    "on-click": "mpc toggle",
+    "state-icons": {
+      "playing": "",
+      "paused": ""
+    }
+  },
+  "mpd#2": {
+    "format": "",
+    "format-disconnected": "",
+    "format-paused": "",
+    "format-stopped": "",
+    // Commands to execute on events
+    "on-click": "mpc -q pause && mpc -q prev && mpc -q start"
+  },
+  "mpd#3": {
+    "interval": 1,
+    "format": "{stateIcon}",
+    "format-disconnected": "",
+    "format-paused": "{stateIcon}",
+    "format-stopped": "",
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    // Commands to execute on events
+    "on-click": "mpc toggle"
+  },
+  "mpd#4": {
+    "format": "",
+    "format-disconnected": "",
+    "format-paused": "",
+    "format-stopped": "",
+    // Commands to execute on events
+    "on-click": "mpc -q pause && mpc -q next && mpc -q start"
+  },
+  "custom/mpd": {
+    "format": " {title} - {artist}",
+    "interval": 5,
+    "exec": "mpc current --format='\"title\":\"%title%\",\"artist\":\"%artist%\"'"
+  },
+  /* ---------------------------------
+   * CENTER MODULES CONFIGURATIONS
+   * -------------------------------*/
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1":  "一",
+      "2":  "二",
+      "3":  "三",
+      "4":  "四",
+      "5":  "五",
+      "6":  "六",
+      "7":  "七",
+      "8":  "八",
+      "9":  "九",
+      "10": "十"
+    }
+    /* "format-icons": {
+      "1":  "Ⅰ",
+      "2":  "Ⅱ",
+      "3":  "Ⅲ",
+      "4":  "Ⅳ",
+      "5":  "Ⅴ",
+      "6":  "Ⅵ",
+      "7":  "Ⅶ",
+      "8":  "Ⅷ",
+      "9":  "Ⅸ",
+      "10": "Ⅹ"
+    } */
+    /* "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "Y",
+      "10": "Z"
+    } */
+  },
+
+  /* ---------------------------------
+   * RIGHT MODULES CONFIGURATIONS
+   * -------------------------------*/
+
+   "group/motherboard": {
+    "orientation": "horizontal",
+    "drawer": {
+        "transition-duration": 500,
+        "children-class": "child-modules",
+        "transition-left-to-right": false
+    },
+    "modules": [
+        "cpu",
+        "memory",
+        "temperature"
+    ]
+  },
+
+  "clock#date": {
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ff9c37'><b>{}</b></span>",
+        "days": "<span color='#fafaf9'><b>{}</b></span>",
+        "weeks": "<span color='#f0ad2f'><b>{}</b></span>",
+        "weekdays": "<span color='#fafaf9'><b>{}</b></span>",
+        "today": "<span color='#ff7c0b'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+    "format": "{:%B %d %Y}",
+    "format-alt": "{:%A, %B %d}",
+    "interval": 1
+  },
+
+  "network": {
+    // "interface": "wlp2s0", // (Optional) To force the use of this interface
+    "format": "⚠  Disabled",
+    "format-wifi": "{icon} {essid}",
+    // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+    "format-ethernet": "  Wired",
+    "format-disconnected": "󰤭  Disconnected",
+    "on-click": "kitty --class=floatterm -e nmtui",
+    "on-click-right": "nm-connection-editor",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format": "{ifname} via {gwaddr} Signal: {signalStrength}%"
+  },
+  
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon} {percent: >3}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "~/.config/hypr/scripts/brightness.sh up",
+    "on-scroll-down": "~/.config/hypr/scripts/brightness.sh down"
+  },
+
+  "pulseaudio#sound": {
+    "scroll-step": 1,
+    "format": "{icon}  {volume: >3}%",
+    "format-bluetooth": "{icon}  {volume: >3}%",
+    "format-muted": "  Muted",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "on-click": "kitty --class=floatterm -e pulsemixer",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/.config/hypr/scripts/volume.sh up",
+    "on-scroll-down": "~/.config/hypr/scripts/volume.sh down"
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "on-click": "~/.config/hypr/scripts/mic.sh"
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity: >3}",
+    "format-charging":" {capacity:>3}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/hypr/scripts/shutdown.sh shutdown",
+    "tooltip": false
+  },
+
+  /* ---------------------------------
+   * OTHER MODULES CONFIGURATIONS
+   * -------------------------------*/
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "critical-threshold": 80,
+    "format": "  {temperatureC}°C"
+  },
+  "cpu": {
+    "format": " {usage: >3}%",
+    "on-click": "kitty --class=floatterm -e btop"
+  },
+  "memory": {
+    "format": " {: >3}%",
+    "on-click": "kitty --class=floatterm -e btop"
+  },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar",
+    "return-type": "json"
+  },
+  "hyprland/window": {
+    "format": "~ {title}"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  }
+}

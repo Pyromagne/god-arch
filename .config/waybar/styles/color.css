@@ -1,0 +1,73 @@
+
+/* :root {
+    --background:   #0c0909;
+    --foreground:   #fafaf9;
+
+    --primary-1:    #47403e;
+    --primary-2:    #292424;
+    --secondary-1:  #786e6c;
+    --secondary-2:  #a89f9e;
+    --accent-1:     #f7db90;
+    --accent-2:     #f2be46;
+    --accent-3:     #f0ad2f;
+
+    --blue-1:       #509fc6;
+    --blue-2:       #2f739a;
+    --blue-3:       #9ac7df;
+
+    --red-1:        #db3727;
+    --red-2:        #98271c;
+    --red-3:        #f77e72;
+
+    --yellow-1:     #eae028;
+    --yellow-2:     #d7c917;
+    --yellow-3:     #f1ee58;
+
+    --green-1:      #a4c459;
+    --green-2:      #67862a;
+    --green-3:      #bdd680;
+
+    --purple-1:     #d28ce0;
+    --purple-2:     #a346b3;
+    --purple-3:     #e4baed;
+
+    --orange-1:     #ff7c0b;
+    --orange-2:     #cb4803;
+    --orange-3:     #ff9c37;
+
+    --cyan-1:       #85dadb;
+    --cyan-2:       #30a5aa;
+    --cyan-3:       #b7eaea;
+} */
+
+
+    @define-color background   #0c0909;
+    @define-color foreground   #fafaf9;
+    @define-color primary-1    #47403e;
+    @define-color primary-2    #292424;
+    @define-color secondary-1  #786e6c;
+    @define-color secondary-2  #a89f9e;
+    @define-color accent-1     #f7db90;
+    @define-color accent-2     #f2be46;
+    @define-color accent-3     #f0ad2f;
+    @define-color blue-1       #509fc6;
+    @define-color blue-2       #2f739a;
+    @define-color blue-3       #9ac7df;
+    @define-color red-1        #db3727;
+    @define-color red-2        #98271c;
+    @define-color red-3        #f77e72;
+    @define-color yellow-1     #eae028;
+    @define-color yellow-2     #d7c917;
+    @define-color yellow-3     #f1ee58;
+    @define-color green-1      #a4c459;
+    @define-color green-2      #67862a;
+    @define-color green-3      #bdd680;
+    @define-color purple-1     #d28ce0;
+    @define-color purple-2     #a346b3;
+    @define-color purple-3     #e4baed;
+    @define-color orange-1     #ff7c0b;
+    @define-color orange-2     #cb4803;
+    @define-color orange-3     #ff9c37;
+    @define-color cyan-1       #85dadb;
+    @define-color cyan-2       #30a5aa;
+    @define-color cyan-3       #b7eaea;

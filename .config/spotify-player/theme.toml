@@ -1,0 +1,64 @@
+# a theme based on the application's `default` theme
+[[themes]]
+name = "default"
+[themes.palette]
+# default theme doesn't have `foreground` and `background` specified
+black = "black"
+red = "red"
+green = "green"
+yellow = "yellow"
+blue = "blue"
+magenta = "magenta"
+cyan = "cyan"
+white = "white"
+bright_black = "bright_black"
+bright_red = "bright_red"
+bright_green = "bright_green"
+bright_yellow = "bright_yellow"
+bright_blue = "bright_blue"
+bright_magenta = "bright_magenta"
+bright_cyan = "bright_cyan"
+bright_white = "bright_white"
+
+[[themes]]
+name = "GERICE"
+[themes.palette]
+background = "#292424"
+foreground = "#f7db90"
+black = "#47403e"
+red = "#db3727"
+green = "#a4c459"
+yellow = "#eae028"
+blue = "#509fc6"
+magenta = "#d28ce0"
+cyan = "#85dadb"
+white = "#786e6c"
+bright_black = "#0c0909"
+bright_red = "#f77e72"
+bright_green = "#bdd680"
+bright_yellow = "#f1ee58"
+bright_blue = "#9ac7df"
+bright_magenta = "#ff79c6"
+bright_cyan = "#b7eaea"
+bright_white = "#fafaf9"
+
+[themes.component_style]
+block_title = { fg = "#ff7c0b"  }
+border = {}
+playback_status = { fg = "#98271c", modifiers = ["Bold"] }
+playback_track = { fg = "#f2be46", modifiers = ["Bold"] }
+playback_artists = { fg = "#f0ad2f", modifiers = ["Bold"] }
+playback_album = { fg = "#f0ad2f" }
+playback_genres = { fg = "#786e6c", modifiers = ["Italic"] }
+playback_metadata = { fg = "#786e6c" }
+playback_progress_bar = { bg = "#47403e", fg = "#ff7c0b" }
+playback_progress_bar_unfilled = { bg = "#292424" }
+current_playing = { fg = "#ff9c37", modifiers = ["Bold"] }
+page_desc = { fg = "#786e6c" }
+playlist_desc = { fg = "#786e6c", modifiers = ["Dim"] }
+table_header = { fg = "#98271c", modifiers = ["Bold"] }
+selection = { modifiers = ["Reversed", "Bold"] }
+secondary_row = {}
+like = {}
+lyrics_played = { modifiers = ["Dim"] }
+lyrics_playing = { fg = "#f0ad2f", modifiers = ["Bold"] }

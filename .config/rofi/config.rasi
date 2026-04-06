@@ -1,0 +1,96 @@
+configuration {
+	display-drun: "run";
+	display-window: "windows";
+	font: "FiraCode Nerd Font 14";
+	show-icons: true;
+	icon-theme: "Tela circle brown";
+}
+
+@theme "/dev/null"
+
+* {
+	background:   #0c0909;
+    foreground:   #fafaf9;
+
+    primary-1:    #47403e;
+    primary-2:    #292424;
+    secondary-1:  #786e6c;
+    secondary-2:  #a89f9e;
+    accent-1:     #f7db90;
+    accent-2:     #f2be46;
+    accent-3:     #f0ad2f;
+
+    blue-1:       #509fc6;
+    blue-2:       #2f739a;
+    blue-3:       #9ac7df;
+
+    red-1:        #db3727;
+    red-2:        #98271c;
+    red-3:        #f77e72;
+
+    yellow-1:     #eae028;
+    yellow-2:     #d7c917;
+    yellow-3:     #f1ee58;
+
+    green-1:      #a4c459;
+    green-2:      #67862a;
+    green-3:      #bdd680;
+
+    purple-1:     #d28ce0;
+    purple-2:     #a346b3;
+    purple-3:     #e4baed;
+
+    orange-1:     #ff7c0b;
+    orange-2:     #cb4803;
+    orange-3:     #ff9c37;
+
+    cyan-1:       #85dadb;
+    cyan-2:       #30a5aa;
+    cyan-3:       #b7eaea;
+
+	margin: 2px;
+	background-color: transparent;
+}
+
+window{
+	background-color: #2924248b;
+    //background-color: var(primary-2);
+	padding: 20px;
+	border: 1px;
+    border-color: var(accent-1);
+    border-radius: 10px;
+}
+
+inputbar {
+	padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+prompt {
+    color: var(orange-1);
+}
+
+entry {
+	cursor-color: var(red-2);
+	color: var(red-1);
+	cursor-width: 4px;
+}
+
+element {
+    padding: 2px;
+	orientation: horizontal;
+	children: [ element-icon, element-text ];
+}
+
+element selected {
+    background-color: var(primary-1);
+    border-radius: 10px;
+}
+
+element-text {
+    color: var(accent-1);
+}
+
+element-icon {
+    size: 22px;
+}

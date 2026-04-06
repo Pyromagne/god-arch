@@ -1,0 +1,170 @@
+@import "./color.css";
+@import "./keyframes.css";
+
+
+#motherboard,
+#temperature,
+#cpu,
+#memory,
+#clock.date,
+#network,
+#backlight,
+#pulseaudio.sound,
+#battery,
+#custom-power{
+    background-color: rgba(71, 64, 62, 0.8);
+    opacity: 1;
+}
+
+/* ----------------------------------
+  * temperature
+  * -------------------------------*/
+#motherboard {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    background-color: @primary-1;
+}
+
+#temperature {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: @yellow-1;
+}
+
+#temperature.critical {
+    color: @red-1;
+}
+
+/* ----------------------------------
+  * cpu
+  * -------------------------------*/
+#cpu {
+    color: @blue-1;
+}
+
+#cpu #cpu-icon {
+    color: @blue-1;
+}
+
+
+/* ----------------------------------
+  * memory
+  * -------------------------------*/
+#memory {
+    color: @green-1;
+}
+
+/* ----------------------------------
+  * clock- date
+  * -------------------------------*/
+#clock.date {
+    color: @accent-1;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+/* ----------------------------------
+  * network
+  * -------------------------------*/
+#network {
+    color: @accent-1;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+#network.disconnected {
+    color: @orange-1;
+}
+
+#network.disabled {
+    color: @red-1;
+}
+
+/* ----------------------------------
+  * backlight
+  * -------------------------------*/
+#backlight {
+    color: @accent-1;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* ----------------------------------
+  * pulseaudio
+  * -------------------------------*/
+#pulseaudio.sound {
+    color: @accent-1;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#pulseaudio.sound.muted {
+    color: @red-1
+}
+
+#pulseaudio.microphone {
+    font-size: 18px;
+    color: @blue-1;
+    background-color: transparent;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#pulseaudio.microphone.muted {
+    color: @red-1;
+}
+
+/* ----------------------------------
+  * battery
+  * -------------------------------*/
+#battery {
+    color: @accent-2;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+#battery.charging {
+    color: @orange-3;
+}
+#battery.pluggged {
+    color: @accent-1;
+}
+#battery.critical:not(.charging) {
+    color: @red-1;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* ----------------------------------
+  * power
+  * -------------------------------*/
+#custom-power {
+    border-style: solid;
+    border-width: 2px;
+    border-color: @primary-1;
+    color: @primary-2;
+    background-color: @accent-1;
+    padding: 0px 20px 0px 17px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+#custom-power:hover {
+    background-color: @red-2;
+    color: @secondary;
+    padding: 0px 20px 0px 17px;
+    border-radius: 10px;
+}

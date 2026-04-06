@@ -1,0 +1,58 @@
+## Global Settings
+max-visible=5
+sort=-time
+layer=top
+anchor=top-right
+font=FiraCode Nerd Font 12
+
+# Look & Feel
+background-color=#47403e
+text-color=#fafaf9
+border-color=#47403e
+border-size=2
+border-radius=10
+progress-color=#f2be46
+padding=10
+default-timeout=5000
+width=512
+height=192
+outer-margin=28
+
+## Volume & Brightness Specific Rules
+# This section solves your stacking issue by using grouping and short timeouts
+[app-name=volume]
+group-by=app-name
+default-timeout=2000
+anchor=bottom-center
+width=300
+
+[app-name=brightness]
+group-by=app-name
+default-timeout=2000
+anchor=top-center
+width=300
+
+[app-name=mic]
+group-by=app-name
+default-timeout=2000
+anchor=bottom-center
+width=250
+text-alignment=center
+
+## Urgency Rules
+# Low: For transient things like volume, brightness, or music tracks
+[urgency=low]
+border-color=#47403e
+default-timeout=2000
+
+# Normal: The default for most apps (Discord, Emails, etc.)
+[urgency=normal]
+border-color=#ff9c37
+default-timeout=10000
+
+# High: For system alerts, low battery, or errors
+# default-timeout=0 means it stays on screen until you click/dismiss it
+[urgency=high]
+border-color=#db3727
+default-timeout=0
+ignore-timeout=1

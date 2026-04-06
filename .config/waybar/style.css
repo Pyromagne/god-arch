@@ -1,0 +1,40 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+@import "./styles/color.css";
+
+/* -----------------------------------------------------------------------------
+  * primary styles
+  * -------------------------------------------------------------------------- */
+
+* {
+    color: @primary-1;
+    border: 0px;
+    padding: 0px;
+    font-family: FiraCode Nerd Font;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 0px;
+}
+
+window#waybar {
+    background: transparent;
+    border-radius: 10px;
+}
+
+@import "./styles/left.css";
+@import "./styles/center.css";
+@import "./styles/right.css";
+
+/* -----------------------------------------------------------------------------
+ * animations
+ * -------------------------------------------------------------------------- */
+
+* {
+    transition: all 0.1s cubic-bezier(0.79, 0.33, 0.14, 0.53);
+}
