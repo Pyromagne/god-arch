@@ -50,47 +50,5 @@ configuration {
 
 	margin: 2px;
 	background-color: transparent;
-}
-
-window{
-	background-color: #2924248b;
-    //background-color: var(primary-2);
-	padding: 20px;
-	border: 1px;
-    border-color: var(accent-1);
     border-radius: 10px;
-}
-
-inputbar {
-	padding: 10px;
-    margin: 0 0 10px 0;
-}
-
-prompt {
-    color: var(orange-1);
-}
-
-entry {
-	cursor-color: var(red-2);
-	color: var(red-1);
-	cursor-width: 4px;
-}
-
-element {
-    padding: 2px;
-	orientation: horizontal;
-	children: [ element-icon, element-text ];
-}
-
-element selected {
-    background-color: var(primary-1);
-    border-radius: 10px;
-}
-
-element-text {
-    color: var(accent-1);
-}
-
-element-icon {
-    size: 22px;
 }

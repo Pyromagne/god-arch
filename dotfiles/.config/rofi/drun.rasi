@@ -1,13 +1,11 @@
 @theme "~/.config/rofi/general.rasi"
 
 window{
-	background-color: #2924248b;
+	background-color: #292424be;
 	padding: 20px;
 	border: 2px;
     border-color: var(accent-2);
     border-radius: 10px;
-    width: calc(35% max 768);
-    height: calc(35% min 512);
 }
 
 inputbar {
@@ -42,5 +40,5 @@ element-text {
 }
 
 element-icon {
-    size: 32px;
+    size: 22px;
 }
