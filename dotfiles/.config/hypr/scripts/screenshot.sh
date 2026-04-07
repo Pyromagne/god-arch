@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="$HOME/Pictures"
+DIR="$HOME/Pictures/Screenshots"
 FILE="$DIR/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png"
 
 action="$1"
@@ -17,10 +17,13 @@ notify_screenshot() {
 
 case "$action" in
     area)
-        grim -g "$(slurp)" "$FILE"
-        wl-copy < "$FILE"
-        notify_screenshot
-        ;;
+    region=$(slurp) || exit 0
+    [ -z "$region" ] && exit 0
+
+    grim -g "$region" "$FILE" || exit 1
+    wl-copy < "$FILE"
+    notify_screenshot
+    ;;
     full)
         grim "$FILE"
         wl-copy < "$FILE"
