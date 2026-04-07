@@ -1,0 +1,8 @@
+[user]
+	name = Pyromagne
+	email = growganoth826@gmail.com
+	signingkey = CB179E9333468167
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
