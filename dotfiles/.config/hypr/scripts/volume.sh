@@ -25,11 +25,11 @@ notify_volume() {
 
 case "$1" in
   up)
-    pamixer -i 5 --unmute
+    pamixer -i 2 --unmute
     notify_volume
     ;;
   down)
-    pamixer -d 5 --unmute
+    pamixer -d 2 --unmute
     notify_volume
     ;;
   mute)

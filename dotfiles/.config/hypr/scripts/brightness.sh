@@ -2,11 +2,11 @@
 
 case "$1" in
   up)
-    brightnessctl set 10%+
+    brightnessctl set 5%+
     ICON="󰃠"
     ;;
   down)
-    brightnessctl set 10%-
+    brightnessctl set 5%-
     ICON="󰃞"
     ;;
 esac
