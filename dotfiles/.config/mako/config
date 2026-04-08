@@ -17,20 +17,22 @@ default-timeout=5000
 width=512
 height=192
 outer-margin=28
+format=<b><span foreground='#f2be46'>%s</span></b>\n%b
 
 ## Volume & Brightness Specific Rules
-# This section solves your stacking issue by using grouping and short timeouts
 [app-name=volume]
 group-by=app-name
 default-timeout=2000
 anchor=bottom-center
 width=300
+format=<b><span foreground='#fafaf9'>%s</span></b>\n%b
 
 [app-name=brightness]
 group-by=app-name
 default-timeout=2000
 anchor=top-center
 width=300
+format=<b><span foreground='#fafaf9'>%s</span></b>\n%b
 
 [app-name=mic]
 group-by=app-name
@@ -38,6 +40,7 @@ default-timeout=2000
 anchor=bottom-center
 width=250
 text-alignment=center
+format=<b><span foreground='#fafaf9'>%s</span></b>\n%b
 
 ## Urgency Rules
 # Low: For transient things like volume, brightness, or music tracks
@@ -47,11 +50,10 @@ default-timeout=2000
 
 # Normal: The default for most apps (Discord, Emails, etc.)
 [urgency=normal]
-border-color=#ff9c37
+border-color=#f7db90
 default-timeout=10000
 
 # High: For system alerts, low battery, or errors
-# default-timeout=0 means it stays on screen until you click/dismiss it
 [urgency=high]
 border-color=#db3727
 default-timeout=0
