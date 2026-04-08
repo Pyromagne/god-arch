@@ -152,7 +152,6 @@
       "keyIcon": ""
     },
     "break",
-    "break",
     {
       "type": "packages",
       "keyIcon": "󰏖",
@@ -178,7 +177,6 @@
       "type": "terminal",
       "keyIcon": ""
     },
-    "break",
     "break",
     {
       "type": "display",
