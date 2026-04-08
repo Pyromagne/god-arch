@@ -1,6 +1,6 @@
-<center>
+<div align="center">
     <h1>God Arch [Hyprland]</h1>
-</center>
+</div>
 
 ## A God Eater inspired Arch Linux RICE (WIP)
 
