@@ -276,7 +276,7 @@
 
   "custom/power": {
     "format": "⏻",
-    "on-click": "~/.config/hypr/scripts/shutdown.sh shutdown",
+    "on-click": "~/.config/hypr/scripts/power.sh Power Menu",
     "tooltip": false
   },
 

@@ -1,0 +1,59 @@
+@theme "~/.config/rofi/general.rasi"
+
+configuration {
+    show-icons:                 false;
+}
+
+window{
+	background-color:           #292424be;
+	padding:                    20px;
+	border:                     2px;
+    border-color:               var(primary-1);
+    border-radius:              10px;
+    width:                      calc(35% max 768);
+}
+
+mainbox {
+    children:                   ["listview", "message"];
+}
+
+listview {
+    enabled:                    true;
+    columns:                    5;
+    lines:                      1;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    reverse:                    false;
+    spacing:                    1px;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                    true;
+    padding:                    32px 10px;
+    text-color:                 var(accent-1);
+    cursor:                     pointer;
+}
+element-text {
+    font:                       "FiraCode Nerd Font 22";
+    background-color:           transparent;
+    text-color:                 inherit;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.5;
+}
+element selected.normal {
+    background-color:           var(primary-1);
+    text-color:                 var(orange-3);
+}
+
+message {
+    enabled:                    true;
+}
+
+textbox {
+    text-color:                 var(accent-2);
+    horizontal-align:           0.5;
+}
