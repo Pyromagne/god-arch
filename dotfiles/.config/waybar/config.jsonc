@@ -52,7 +52,7 @@
    * -------------------------------*/
   "custom/launcher": {
     "format": "    ",
-    "on-click": "rofi -show drun --term=kitty",
+    "on-click": "rofi -show drun -theme ~/.config/rofi/drun.rasi --term=kitty",
     "tooltip": false
   },
 

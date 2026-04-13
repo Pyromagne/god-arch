@@ -8,7 +8,7 @@ window{
 	background-color:           #292424be;
 	padding:                    20px;
 	border:                     2px;
-    border-color:               var(primary-1);
+    border-color:               var(red-2);
     border-radius:              10px;
     width:                      calc(35% max 768);
 }

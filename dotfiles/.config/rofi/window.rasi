@@ -1,46 +1,46 @@
 @theme "~/.config/rofi/general.rasi"
 
 window{
-	background-color: #2924248b;
-	padding: 20px;
-	border: 2px;
-    border-color: var(accent-2);
-    border-radius: 10px;
-    width: calc(35% max 768);
-    height: calc(35% min 512);
+	background-color:          #2924248b;
+	padding:                    20px;
+	border:                     2px;
+    border-color:               var(accent-2);
+    border-radius:              10px;
+    width:                      calc(35% max 768);
+    height:                     calc(35% min 512);
 }
-
 inputbar {
-	padding: 10px;
-    margin: 0 0 10px 0;
+	padding:                    10px;
+    margin:                     0 0 10px 0;
 }
 
 prompt {
-    color: var(orange-1);
+    color:                      var(orange-1);
 }
 
 entry {
-	cursor-color: var(red-2);
-	color: var(red-1);
-	cursor-width: 4px;
-    border-radius: 0px;
+	cursor-color:               var(red-2);
+	color:                      var(red-1);
+	cursor-width:               4px;
+    border-radius:              0px;
 }
 
 element {
-    padding: 2px;
-	orientation: horizontal;
-	children: [ element-icon, element-text ];
+    padding:                    2px;
+	orientation:                horizontal;
+	children:                   [element-icon,element-text];
 }
 
 element selected {
-    background-color: var(primary-1);
-    border-radius: 10px;
+    background-color:           var(primary-1);
+    border-radius:              10px;
 }
 
 element-text {
-    color: var(accent-1);
+    color:                      var(accent-1);
+    vertical-align:             0.5;
 }
 
 element-icon {
-    size: 32px;
+    size:                       32px;
 }

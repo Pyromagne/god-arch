@@ -1,44 +1,65 @@
 @theme "~/.config/rofi/general.rasi"
 
 window{
-	background-color: #292424be;
-	padding: 20px;
-	border: 2px;
-    border-color: var(accent-2);
-    border-radius: 10px;
+	background-color:           #292424be;
+	padding:                    20px;
+	border:                     2px;
+    border-color:               var(accent-2);
+    border-radius:              10px;
 }
 
 inputbar {
-	padding: 10px;
-    margin: 0 0 10px 0;
+	padding:                    10px;
+    margin:                     0 0 10px 0;
 }
 
 prompt {
-    color: var(orange-1);
+    color:                      var(orange-1);
 }
 
 entry {
-	cursor-color: var(red-2);
-	color: var(red-1);
-	cursor-width: 4px;
-    border-radius: 0px;
+	cursor-color:               var(red-2);
+	color:                      var(red-1);
+	cursor-width:               4px;
+    border-radius:              0px;
 }
 
+listview {
+    enabled:                    true;
+    columns:                    4;
+    lines:                      3;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    reverse:                    false;
+    spacing:                    20px;
+}
+
+/*****----- Elements -----*****/
+
 element {
-    padding: 2px;
-	orientation: horizontal;
-	children: [ element-icon, element-text ];
+    background-color:           var(primary-1);
+	orientation:                vertical;
+	children:                   [element-icon, element-text];
+    padding: 14px;
 }
 
 element selected {
-    background-color: var(primary-1);
-    border-radius: 10px;
 }
 
 element-text {
-    color: var(accent-1);
+    color:                      var(accent-1);
+    vertical-align:             0.5;
+    horizontal-align:           0.5;
+}
+
+element-text selected{
+    color:                      var(orange-1);
+    font:                       "FiraCode Nerd Font 22";
 }
 
 element-icon {
-    size: 22px;
+    padding:                    16px;
+    size:                       32px;
 }
