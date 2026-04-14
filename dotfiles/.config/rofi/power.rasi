@@ -5,39 +5,39 @@ configuration {
 }
 
 window{
-	background-color:           #292424be;
-	padding:                    20px;
-	border:                     2px;
-    border-color:               var(red-2);
-    border-radius:              10px;
-    width:                      calc(35% max 768);
+    fullscreen: true;
+	background-color:           #2924244c;
+	padding:                    calc(40%) calc(20%) 0 calc(20%);
+    border-radius:              0px;
 }
 
 mainbox {
     children:                   ["listview", "message"];
+    expand: false;
 }
 
 listview {
     enabled:                    true;
-    columns:                    5;
+    columns:                    4;
     lines:                      1;
     cycle:                      true;
     dynamic:                    true;
     scrollbar:                  false;
-    layout:                     vertical;
+    flow:                       horizontal;
     reverse:                    false;
-    spacing:                    1px;
+    spacing:                    20px;
+    margin:                     20px;
 }
 
 /*****----- Elements -----*****/
 element {
     enabled:                    true;
-    padding:                    32px 10px;
     text-color:                 var(accent-1);
     cursor:                     pointer;
 }
 element-text {
-    font:                       "FiraCode Nerd Font 22";
+    padding:                    48px;
+    font:                       "FiraCode Nerd Font 28";
     background-color:           transparent;
     text-color:                 inherit;
     cursor:                     inherit;
@@ -46,7 +46,7 @@ element-text {
 }
 element selected.normal {
     background-color:           var(primary-1);
-    text-color:                 var(orange-3);
+    text-color:                 var(orange-1);
 }
 
 message {
