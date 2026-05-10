@@ -1,44 +1,70 @@
 @theme "~/.config/rofi/general.rasi"
 
 window{
-	background-color:          #2924248b;
+    location:                   south;
+    anchor:                     south;
+    width:                      100%;
+    margin:                     0% 2% 3% 2%;
 	padding:                    20px;
-	border:                     2px;
-    border-color:               var(accent-2);
-    border-radius:              10px;
-    width:                      calc(35% max 768);
-    height:                     calc(35% min 512);
+    background-color:          #29242478;
+    border:                     2px;
+    border-color:               #ff9b37a8;
+    border-radius:              12px;
+    font:                       "FiraCode Nerd Font 18";
 }
+
+mainbox {
+    children:                   [listview];
+}
+
 inputbar {
-	padding:                    10px;
-    margin:                     0 0 10px 0;
+    enabled:                    false;
 }
 
 prompt {
-    color:                      var(orange-1);
+    color:                      var(foreground);
 }
 
 entry {
-	cursor-color:               var(red-2);
-	color:                      var(red-1);
-	cursor-width:               4px;
-    border-radius:              0px;
+    enabled:                    false;
+}
+
+listview {
+    enabled:                    true;
+    columns:                    5;
+    lines:                      1;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    flow:                       horizontal;
+    reverse:                    false;
+    spacing:                    10px;
 }
 
 element {
-    padding:                    2px;
-	orientation:                horizontal;
-	children:                   [element-icon,element-text];
+    spacing:                    16px;
+    padding:                    20px;
+    margin:                     0px;
+	flow:                       horizontal;
+	children:                   [element-icon, element-text];
+    cursor:                     pointer;
 }
 
 element selected {
-    background-color:           var(primary-1);
-    border-radius:              10px;
+    background-color:           #f2be4680;
+    
 }
 
 element-text {
+    padding:                    16px 0px;
+    font:                       "FiraCode Nerd Font 12";
     color:                      var(accent-1);
     vertical-align:             0.5;
+    cursor:                     pointer;
+}
+
+element-text selected {
+    color:                      var(foreground);
 }
 
 element-icon {

@@ -1,7 +1,8 @@
 configuration {
 	display-drun:               "run";
     drun-display-format:        "{name}";
-	display-window:             "Running Windows";
+	display-window:             "window";
+    window-format:              "{c}\n{t}";
 	font:                       "FiraCode Nerd Font 14";
 	show-icons:                 true;
 	icon-theme:                 "Tela circle brown";
