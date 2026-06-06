@@ -3,7 +3,7 @@
 window{
     location:                   south;
     anchor:                     south;
-    width:                      100%;
+    width:                      75%;
     margin:                     0% 2% 3% 2%;
 	padding:                    20px;
     background-color:          #29242478;
@@ -31,7 +31,7 @@ entry {
 
 listview {
     enabled:                    true;
-    columns:                    5;
+    columns:                    4;
     lines:                      1;
     cycle:                      true;
     dynamic:                    true;

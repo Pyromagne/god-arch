@@ -1,11 +1,13 @@
 @theme "~/.config/rofi/general.rasi"
 
 window{
+    width:                      40%;
 	background-color:           #292424be;
 	padding:                    20px;
 	border:                     2px;
     border-color:               var(accent-2);
     border-radius:              10px;
+    font:                       "FiraCode Nerd Font 12";
 }
 
 inputbar {
@@ -26,40 +28,38 @@ entry {
 
 listview {
     enabled:                    true;
-    columns:                    4;
-    lines:                      3;
+    columns:                    2;
+    lines:                      6;
     cycle:                      true;
     dynamic:                    true;
     scrollbar:                  false;
     layout:                     vertical;
     reverse:                    false;
-    spacing:                    20px;
+    spacing:                    10px;
 }
 
 /*****----- Elements -----*****/
 
 element {
-    background-color:           var(primary-1);
-	orientation:                vertical;
+	orientation:                horizontal;
 	children:                   [element-icon, element-text];
-    padding: 14px;
+    spacing:                    10px;
+    padding:                    10px;
 }
 
 element selected {
+    background-color:           var(primary-1);
 }
 
 element-text {
     color:                      var(accent-1);
     vertical-align:             0.5;
-    horizontal-align:           0.5;
 }
 
 element-text selected{
     color:                      var(orange-1);
-    font:                       "FiraCode Nerd Font 22";
 }
 
 element-icon {
-    padding:                    16px;
     size:                       32px;
 }
