@@ -1,5 +1,7 @@
 #!/bin/bash
 
+MAX=120
+
 notify_volume() {
     VOL=$(pamixer --get-volume)
     MUTED=$(pamixer --get-mute)
@@ -11,7 +13,7 @@ notify_volume() {
     else
         TEXT="$VOL"
         VALUE=$VOL
-        if [ "$VOL" -le 30 ]; then ICON=" "; 
+        if [ "$VOL" -le 50 ]; then ICON=" "; 
         else ICON=" "; fi
     fi
 
@@ -25,11 +27,18 @@ notify_volume() {
 
 case "$1" in
   up)
-    pamixer -i 2 --unmute
+    CUR=$(pamixer --get-volume)
+    VOL=$((CUR + 2))
+
+    if [ "$VOL" -gt "$MAX" ]; then
+        VOL=$MAX
+    fi
+
+    pamixer --set-volume "$VOL" --unmute --allow-boost
     notify_volume
     ;;
   down)
-    pamixer -d 2 --unmute
+    pamixer -d 2 --unmute --allow-boost
     notify_volume
     ;;
   mute)
