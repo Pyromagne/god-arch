@@ -28,6 +28,7 @@
 - pipewire
 - slurp
 - wl-copy
+- jq
 
 - noto-fonts
 - noto-fonts-cjk
