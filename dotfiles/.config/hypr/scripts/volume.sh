@@ -35,14 +35,13 @@ case "$1" in
     fi
 
     pamixer --set-volume "$VOL" --unmute --allow-boost
-    notify_volume
     ;;
   down)
     pamixer -d 2 --unmute --allow-boost
-    notify_volume
     ;;
   mute)
     pamixer -t
-    notify_volume
     ;;
 esac
+
+notify_volume
