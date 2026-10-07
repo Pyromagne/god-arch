@@ -10,6 +10,11 @@ notify_volume() {
         ICON=" "
         TEXT="Muted"
         VALUE=0
+    elif [[ "$VOL" -gt 100 ]]; then
+        TEXT="$VOL (boosted)"
+        VALUE=$VOL
+        if [ "$VOL" -le 50 ]; then ICON=" "; 
+        else ICON=" "; fi  
     else
         TEXT="$VOL"
         VALUE=$VOL
